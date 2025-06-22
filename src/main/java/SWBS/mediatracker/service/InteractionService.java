@@ -35,7 +35,7 @@ public class InteractionService {
         if (currentTry <= MAX_RETRIES) {
             return ResponseEntity.ok(Map.of(
                     "HTTP Status", "success",
-                    "Status Code", "200",
+                    "Request successful. The server has responded as required.", "200",
                     "InteractionId", UUID.randomUUID().toString(),
                     "extension", extension
             ));
