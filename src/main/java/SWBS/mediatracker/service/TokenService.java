@@ -29,7 +29,7 @@ public class TokenService {
         body.add("client_id", authProperties.getClientId());
         body.add("client_secret", authProperties.getClientSecret());
         body.add("scope", authProperties.getScope());
-        body.add("grant_type", "client_credentials");
+        body.add("grant_type", authProperties.getGrant_type());
 
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(body, headers);
 

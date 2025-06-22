@@ -11,6 +11,16 @@ public class SwbcAuthProperties {
     private String clientSecret;
     private String scope;
 
+    public String getGrant_type() {
+        return grant_type;
+    }
+
+    public void setGrant_type(String grant_type) {
+        this.grant_type = grant_type;
+    }
+
+    private String grant_type;
+
     // Getters and Setters
     public String getBaseUrl() {
         return baseUrl;
