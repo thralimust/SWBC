@@ -35,8 +35,8 @@ public class MediaTrackerController {
     }
 
     @PostMapping("/api/v1/calltag")
-    public ResponseEntity<?> handleInteraction(@RequestParam(name = "GENESYS_EXTENSION") String extension) {
-        return interactionService.processInteraction(extension);
+    public ResponseEntity<?> handleInteraction(@RequestParam(name = "GENESYS_EXTENSION") String extension, @RequestParam(name = "simulate") boolean simulate) {
+        return interactionService.processInteraction(extension, simulate);
     }
 
 }

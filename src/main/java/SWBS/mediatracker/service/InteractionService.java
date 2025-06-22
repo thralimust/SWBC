@@ -14,7 +14,7 @@ public class InteractionService {
     private static final int TOTAL_TIME_MS = 30_000;
     private final Map<String, Integer> extensionAttempts = new ConcurrentHashMap<>();
 
-    public ResponseEntity<?> processInteraction(String extension) {
+    public ResponseEntity<?> processInteraction(String extension , boolean simulate) {
         if (extension == null || extension.isEmpty()) {
             return ResponseEntity.badRequest().body(Map.of(
                     "status", "error",
@@ -34,18 +34,20 @@ public class InteractionService {
 
         if (currentTry <= MAX_RETRIES) {
             return ResponseEntity.ok(Map.of(
-                    "HTTP Status Code", "success",
+                    "HTTP Status", "success",
                     "Status Code", "200",
-
-                    "extension", extension,
-                    "InteractionId", UUID.randomUUID().toString()
+                    "InteractionId", UUID.randomUUID().toString(),
+                    "extension", extension
             ));
         } else {
-            /*try {
-                Thread.sleep(TOTAL_TIME_MS);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }*/
+            if (simulate) {
+                try {
+                    Thread.sleep(TOTAL_TIME_MS);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+
 
             String correlationId = UUID.randomUUID().toString();
             extensionAttempts.remove(extension); // reset for reuse
