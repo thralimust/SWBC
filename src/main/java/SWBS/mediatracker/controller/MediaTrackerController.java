@@ -25,10 +25,8 @@ public class MediaTrackerController {
 
         try {
             String token = tokenService.getBearerToken();
-
             return ResponseEntity.ok(Map.of("access_token", token));
         } catch (Exception e) {
-
             return ResponseEntity.status(500).body(Map.of("Error", e.getMessage()));
         }
 
