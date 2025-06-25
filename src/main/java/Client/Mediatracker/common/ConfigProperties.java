@@ -1,4 +1,4 @@
-package SWBS.mediatracker.config;
+package Client.Mediatracker.common;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
