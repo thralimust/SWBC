@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties(prefix = "swbc.auth")
-public class SwbcAuthProperties {
+public class ConfigProperties {
     private String baseUrl;
     private String clientId;
     private String clientSecret;

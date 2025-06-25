@@ -1,4 +1,4 @@
-package SWBS.mediatracker.service;
+package Client.Mediatracker.service;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

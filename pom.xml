@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>SWBC-Media-Tracker-API-Integration-Spring</artifactId>
+    <artifactId>Client-Media-Tracker-API-Integration</artifactId>
     <version>1.0-SNAPSHOT</version>
     <parent>
         <groupId>org.springframework.boot</groupId>

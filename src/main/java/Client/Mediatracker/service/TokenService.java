@@ -1,12 +1,11 @@
-package SWBS.mediatracker.service;
+package Client.Mediatracker.service;
 
-import SWBS.mediatracker.config.SwbcAuthProperties;
+import Client.Mediatracker.common.ConfigProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Map;
@@ -15,7 +14,7 @@ import java.util.Map;
 public class TokenService {
 
     @Autowired
-    private SwbcAuthProperties authProperties;
+    private ConfigProperties authProperties;
 
     private final RestTemplate restTemplate = new RestTemplate();
 

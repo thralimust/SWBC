@@ -1,14 +1,12 @@
-package SWBS.mediatracker.controller;
+package Client.Mediatracker.controller;
 
-import SWBS.mediatracker.service.InteractionService;
-import SWBS.mediatracker.service.TokenService;
+import Client.Mediatracker.service.InteractionService;
+import Client.Mediatracker.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
-import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
 
 @RestController
 @RequestMapping("/")
@@ -32,9 +30,9 @@ public class MediaTrackerController {
 
     }
 
-    @PostMapping("/api/v1/calltag")
+   /* @PostMapping("/api/v1/calltag")
     public ResponseEntity<?> handleInteraction(@RequestParam(name = "GENESYS_EXTENSION") String extension, @RequestParam(name = "simulate") boolean simulate) {
         return interactionService.processInteraction(extension, simulate);
-    }
+    }*/
 
 }

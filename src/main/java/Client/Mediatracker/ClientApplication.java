@@ -6,9 +6,9 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 
 @SpringBootApplication
 @EnableConfigurationProperties
-public class SWBCApplication {
+public class ClientApplication {
     public static void main(String[] args) {
 
-        SpringApplication.run(SWBCApplication.class, args);
+        SpringApplication.run(ClientApplication.class, args);
     }
 }
