@@ -1,56 +1,60 @@
 package Client.Mediatracker.common;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix = "swbc.auth")
 public class ConfigProperties {
+
+    // Auth properties
+    @Value("${swbc.auth.base-url}")
     private String baseUrl;
+
+    @Value("${swbc.auth.client-id}")
     private String clientId;
+
+    @Value("${swbc.auth.client-secret}")
     private String clientSecret;
+
+    @Value("${swbc.auth.scope}")
     private String scope;
 
-    public String getGrant_type() {
-        return grant_type;
-    }
+    @Value("${swbc.auth.grant_type}")
+    private String grantType;
 
-    public void setGrant_type(String grant_type) {
-        this.grant_type = grant_type;
-    }
+    // Media API properties
+    @Value("${media.api.base-url}")
+    private String mediaApiBaseUrl;
 
-    private String grant_type;
+    @Value("${media.api.path}")
+    private String mediaApiPath;
 
-    // Getters and Setters
+    // Getters
     public String getBaseUrl() {
         return baseUrl;
-    }
-
-    public void setBaseUrl(String baseUrl) {
-        this.baseUrl = baseUrl;
     }
 
     public String getClientId() {
         return clientId;
     }
 
-    public void setClientId(String clientId) {
-        this.clientId = clientId;
-    }
-
     public String getClientSecret() {
         return clientSecret;
-    }
-
-    public void setClientSecret(String clientSecret) {
-        this.clientSecret = clientSecret;
     }
 
     public String getScope() {
         return scope;
     }
 
-    public void setScope(String scope) {
-        this.scope = scope;
+    public String getGrantType() {
+        return grantType;
+    }
+
+    public String getMediaApiBaseUrl() {
+        return mediaApiBaseUrl;
+    }
+
+    public String getMediaApiPath() {
+        return mediaApiPath;
     }
 }
