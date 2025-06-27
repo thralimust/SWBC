@@ -1,7 +1,7 @@
 package Client.Mediatracker.controller;
 
-import Client.Mediatracker.service.InteractionService;
-import Client.Mediatracker.service.TokenService;
+import Client.Mediatracker.service.impl.InteractionService;
+import Client.Mediatracker.service.impl.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

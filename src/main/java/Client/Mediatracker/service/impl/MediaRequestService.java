@@ -1,4 +1,4 @@
-package Client.Mediatracker.service;
+package Client.Mediatracker.service.impl;
 
 import Client.Mediatracker.common.ConfigProperties;
 import org.springframework.stereotype.Service;

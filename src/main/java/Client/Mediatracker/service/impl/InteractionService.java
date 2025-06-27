@@ -1,4 +1,4 @@
-package Client.Mediatracker.service;
+package Client.Mediatracker.service.impl;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
+/*implementation*/
 @Service
 public class InteractionService {
 
@@ -14,7 +15,7 @@ public class InteractionService {
     private static final int TOTAL_TIME_MS = 30_000;
     private final Map<String, Integer> extensionAttempts = new ConcurrentHashMap<>();
 
-    public ResponseEntity<?> processInteraction(String extension , boolean simulate) {
+    public ResponseEntity<?> processInteraction(String extension, boolean simulate) {
         if (extension == null || extension.isEmpty()) {
             return ResponseEntity.badRequest().body(Map.of(
                     "status", "error",

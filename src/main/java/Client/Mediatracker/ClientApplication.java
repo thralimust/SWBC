@@ -1,16 +1,12 @@
 package Client.Mediatracker;
 
-import Client.Mediatracker.common.ConfigProperties;
-import Client.Mediatracker.service.MediaRequestService;
+import Client.Mediatracker.service.impl.MediaRequestService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.CommandLineRunner;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Scanner;
 
 @SpringBootApplication
 @EnableConfigurationProperties

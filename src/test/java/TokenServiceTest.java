@@ -1,4 +1,4 @@
-import Client.Mediatracker.service.TokenService;
+import Client.Mediatracker.service.impl.TokenService;
 import Client.Mediatracker.common.ConfigProperties;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

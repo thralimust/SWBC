@@ -1,7 +1,7 @@
 
 
 import Client.Mediatracker.common.ConfigProperties;
-import Client.Mediatracker.service.MediaRequestService;
+import Client.Mediatracker.service.impl.MediaRequestService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
