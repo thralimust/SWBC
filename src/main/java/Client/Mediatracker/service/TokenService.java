@@ -13,11 +13,13 @@ import java.util.Map;
 @Service
 public class TokenService {
 
-    @Autowired
-    private ConfigProperties authProperties;
+    private final ConfigProperties authProperties;
+    private final RestTemplate restTemplate;
 
-    private final RestTemplate restTemplate = new RestTemplate();
-
+    public TokenService(ConfigProperties authProperties, RestTemplate restTemplate) {
+        this.authProperties = authProperties;
+        this.restTemplate = restTemplate;
+    }
 
     public String getBearerToken() {
         String url = authProperties.getBaseUrl();
@@ -37,9 +39,8 @@ public class TokenService {
             Map<?, ?> responseBody = response.getBody();
             return responseBody != null ? (String) responseBody.get("access_token") : null;
         } catch (Exception ex) {
-
             throw new RuntimeException("I/O error on POST request for \"" + url + "\": " + ex.getMessage());
         }
     }
-
 }
+
